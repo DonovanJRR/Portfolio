@@ -22,6 +22,8 @@ getwd()
 setwd("/Users/donovanrodriguez/Documents/Database/CSV")
 ```
 
+in the time that i clean the data in excel i saw tthat trhough the time the casual member was increase in the pass of time and in the most actual data the casual members now are our main source 
+
 ### Step 1 Collected Data
 ```{r}
 J01 <- read_csv("/Users/donovanrodriguez/Documents/Database/CSV/202201-divvy-tripdata.csv")
@@ -264,6 +266,8 @@ all_trips_v2 %>%
 
 ```
 
+
+As you can see in the visualization the casual member use more in weekends and the members use more in weekday this can be useful we can use an ad for weekdays for workers and in weekends we can use an ad for casual to have a ride in the park or almost here in mexico city we have days that the avenue Reforma is closed and you can use the bicycle.
 ```{r}
 # Let's create a visualization for average duration
 all_trips_v2 %>% 
