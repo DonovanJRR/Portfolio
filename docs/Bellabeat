@@ -1,0 +1,81 @@
+
+SELECT 
+    (SELECT COUNT(DISTINCT Id) FROM `crack-audio-349523.Bellabeat.Activity`) AS distinct_count_activity,
+    (SELECT COUNT(DISTINCT Id) FROM `crack-audio-349523.Bellabeat.Sleep`) AS distinct_count_Sleep,
+    (SELECT COUNT(DISTINCT Id) FROM `crack-audio-349523.Bellabeat.Weight`) AS distinct_count_Weight;
+
+-- This information provides insights into the number of participants within each dataset,
+
+-- The activity dataset consists of 33 participants each, while the sleep dataset includes 24 participants. However, the weight dataset only has 8 participants. It is worth noting that the limited number of participants in the weight dataset may not be sufficient to draw meaningful recommendations or conclusions based on this data.
+
+-- Now, let's examine the summary statistics of the datasets.
+
+SELECT 'TotalDistance' AS metric,
+       AVG(TotalDistance) AS average,
+       MIN(TotalDistance) AS minimum,
+       MAX(TotalDistance) AS maximum
+FROM `crack-audio-349523.Bellabeat.Activity`
+UNION ALL
+SELECT 'LightlyActiveMinutes' AS metric,
+       AVG(LightlyActiveMinutes) AS average,
+       MIN(LightlyActiveMinutes) AS minimum,
+       MAX(LightlyActiveMinutes) AS maximum
+FROM `crack-audio-349523.Bellabeat.Activity`
+UNION ALL
+SELECT 'FairlyActiveMinutes' AS metric,
+       AVG(FairlyActiveMinutes) AS average,
+       MIN(FairlyActiveMinutes) AS minimum,
+       MAX(FairlyActiveMinutes) AS maximum
+FROM `crack-audio-349523.Bellabeat.Activity`
+UNION ALL
+SELECT 'VeryActiveMinutes' AS metric,
+       AVG(VeryActiveMinutes) AS average,
+       MIN(VeryActiveMinutes) AS minimum,
+       MAX(VeryActiveMinutes) AS maximum
+FROM `crack-audio-349523.Bellabeat.Activity`
+UNION ALL
+SELECT 'Calories' AS metric,
+       AVG(Calories) AS average,
+       MIN(Calories) AS minimum,
+       MAX(Calories) AS maximum
+FROM `crack-audio-349523.Bellabeat.Activity`
+UNION ALL
+SELECT 'TotalTimeInBed' AS metric,
+       AVG(TotalTimeInBed) AS average,
+       MIN(TotalTimeInBed) AS minimum,
+       MAX(TotalTimeInBed) AS maximum
+FROM `crack-audio-349523.Bellabeat.Sleep`
+UNION ALL
+SELECT 'TotalTimeInBed' AS metric,
+       AVG(TotalTimeInBed) AS average,
+       MIN(TotalTimeInBed) AS minimum,
+       MAX(TotalTimeInBed) AS maximum
+FROM `crack-audio-349523.Bellabeat.Sleep`
+UNION ALL
+SELECT 'TotalMinutesAsleep' AS metric,
+       AVG(TotalMinutesAsleep) AS average,
+       MIN(TotalMinutesAsleep) AS minimum,
+       MAX(TotalMinutesAsleep) AS maximum
+FROM `crack-audio-349523.Bellabeat.Sleep`
+UNION ALL
+SELECT 'WeightKg' AS metric,
+       AVG(WeightKg) AS average,
+       MIN(WeightKg) AS minimum,
+       MAX(WeightKg) AS maximum
+FROM `crack-audio-349523.Bellabeat.Weight`
+UNION ALL
+SELECT 'WeightPounds' AS metric,
+       AVG(WeightPounds) AS average,
+       MIN(WeightPounds) AS minimum,
+       MAX(WeightPounds) AS maximum
+FROM `crack-audio-349523.Bellabeat.Weight`;
+
+-- We can find some interesting insights here the average distance is 5.4997, this means that the average calories is 2303.1648, 
+the Lightly Active Minutes has average 192.81 minutes, Fairly Active minutes 13.5648 and Very Active Minutes 21.16
+that means that the casual person is our user, but we have some high performance athlete has a 210 minutes in this intensity 
+as well that mean a high calories with 4900 calories, the average weight is 72 KG or 158.81 pounds, minimum 52.59 KG or 115.93 pounds 
+the maximum is 133.5 KG or 296.31 pounds, other insight is the difference Total Time In Bed is 458.63 minutes or 7.64 hours, 
+but the real time that they are asleep is 419.46 minutes or 6.99 hours our users are very close to have a healthy time of sleep, 
+they took 39.17 minutes to sleep, as well the minimum is 61 minutes in bed and he sleep 58 minutes, thats not very healthy for our customer, 
+the maximum was 961 minutes in bed or 16.01 hours in bed, probably some injury or he is in the hospital,  the maximum time asleep was 13.2667 
+our user has hypersomnia thats not very healthy for him.
