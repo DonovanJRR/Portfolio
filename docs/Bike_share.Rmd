@@ -292,3 +292,5 @@ counts <- aggregate(all_trips_v2$ride_length ~ all_trips_v2$member_casual + all_
 ```{r}
 write.csv(counts, file = '/Users/donovanrodriguez/Documents/Database/avg_ride_length.csv')
 ```
+
+To see the visualization you can go to my Tableu here: https://public.tableau.com/app/profile/donovan7710
