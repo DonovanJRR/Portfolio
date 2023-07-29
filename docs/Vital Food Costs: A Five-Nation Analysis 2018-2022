@@ -1,0 +1,32 @@
+# Vital Food Costs: A Five-Nation Analysis 2018-2022
+
+## The five nations that I´m going to analyze is Japan, Canada, Sweden, Australia and South Africa
+
+SELECT DISTINCT Country_
+FROM `crack-audio-349523.Food_Prices.Food_Prices`;
+
+## Item´s in the dataset, Bread, Milk, Eggs and Potatoes
+
+SELECT DISTINCT Food_Item_
+FROM `crack-audio-349523.Food_Prices.Food_Prices`;
+
+## Measure by item is Loaf-Bread, 1L-Milk, Carton of 12-Eggs, 1KG-Potatoes and 1KG-Milk
+
+SELECT DISTINCT Unit_of_Measurement, Food_Item_
+FROM `crack-audio-349523.Food_Prices.Food_Prices`;
+
+## In this part we have the AVG, MIN, and MAX prices in USD by item per country, the price of the Egg in Australia was $4.03 which makes the highest price of the Egg in our dataset and the minimum was $1.43 in South Africa is the lowest price, 
+the highest price of Bread was in Sweden at $2.53, the lowest price was in South Africa, 
+the highest price for Milk was in Canada at $2.1, the lowest price was 0.79 in South Africa, 
+the highest price for potatoes was in Japan, the lowest price was in South Africa at $0.87.
+
+
+SELECT Country_, Food_Item_,
+       AVG(Price_in_USD) AS average,
+       MIN(Price_in_USD) AS minimum,
+       MAX(Price_in_USD) AS maximum
+FROM `crack-audio-349523.Food_Prices.Food_Prices`
+GROUP BY Country_, Food_Item_;
+
+SELECT Country_, Year_, Month_, Food_Item_, Unit_of_Measurement, Price_in_USD
+FROM `crack-audio-349523.Food_Prices.Food_Prices`;
