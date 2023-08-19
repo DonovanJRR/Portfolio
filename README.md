@@ -1,5 +1,5 @@
 Hello there
 
-Welcome to my Github I'm a dataa nalyst student and here is my portfolio i like a lot R but I using SQL, Tableu at the moment
+I'm a data analyst student and this is my portfolio, you can see what can i do with SQL, Tableu and R
 
 Thank you.
