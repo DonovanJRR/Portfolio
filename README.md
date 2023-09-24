@@ -1,5 +1,5 @@
-Hello there
+Hello there,
 
-I'm a data analyst student and this is my portfolio, you can see what can i do with SQL, Tableu and R
+I'm a data analyst student and this is my portfolio, you can take a sit and watch my journey using SQL, Tableu, Python, Power Bi, Excel and R
 
 Thank you.
